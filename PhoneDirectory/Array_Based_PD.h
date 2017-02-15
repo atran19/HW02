@@ -55,6 +55,8 @@ public:
 	class Directory_Entry
 	{
 	public:
+		string name;
+		string number;
 		Directory_Entry() {} // Default no-argument constructor 
 		Directory_Entry(std::string the_name, std::string the_number) {
 			// constructor not implemented yet
