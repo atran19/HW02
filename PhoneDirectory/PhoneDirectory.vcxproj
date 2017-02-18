@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Array_Based_PD.cpp" />
+    <ClCompile Include="Directory_.cpp" />
     <ClCompile Include="PD_Application.cpp" />
   </ItemGroup>
   <ItemGroup>
