@@ -52,29 +52,31 @@ public:
 	 */
 	void save();
 
+	private:
+		class Directory_Entry /* Exercise 1.6 */
+		{
+		public:
+			Directory_Entry() {} // Default no-argument constructor 
+			Directory_Entry(std::string the_name, std::string the_number) {
+				name = the_name;
+				number = the_number;
+			}
+			std::string get_name() const {
+				return name;
+			}
+			std::string get_number() const {
+				return number;
+			}
+			void set_number(const std::string& new_number) {
+				number = new_number;
+			}
 
-	class Directory_Entry
-{
-public:
-	string name;
-	string number;
-	Directory_Entry() {} // Default no-argument constructor 
-	Directory_Entry(std::string the_name, std::string the_number) {
-		// constructor not implemented yet
-	}
-	std::string get_name() const {
-		return ""; // method not implemented yet
-	}
-	std::string get_number() const {
-		return ""; // method not implemented yet
-	}
-	void set_number(const std::string& new_number) {
-		// method not implemented yet
-	}
+		private:
+			std::string name;
+			std::string number;
+	};
 
-private:
 
-};
 	// Private Functions
 	/** Searches the array of directory entries for the name.
 		@param name The name to be found

@@ -43,11 +43,11 @@ void process_commands(Phone_Directory& the_directory)
 		cin >> choice;
 		cin.ignore(numeric_limits<int>::max(), '\n');
 		switch (choice) {
-		case 0: do_add_change_entry(the_directory); break;
-		case 1: do_lookup_entry(the_directory); break;
-		case 2: do_remove_entry(the_directory); break;
-		case 3: do_save(the_directory); break;
-		case 4: do_save(the_directory); break;
+			case 0: do_add_change_entry(the_directory); break;
+			case 1: do_lookup_entry(the_directory); break;
+			case 2: do_remove_entry(the_directory); break;
+			case 3: do_save(the_directory); break;
+			case 4: do_save(the_directory); break;
 		}
 	} while (choice < NUM_COMMANDS - 1);
 }
@@ -85,14 +85,13 @@ void do_lookup_entry(Phone_Directory& the_directory)
 	}
 }
 
-void do_remove_entry(Phone_Directory& the_directory) // Exercise 1.8: please complete the function do_remove_entry - Ed/Kent
+void do_remove_entry(Phone_Directory& the_directory) /* Exercise 1.8 */
 {
 	string name;
 	cout << "Enter name: ";
 	getline(cin, name);
+	the_directory.remove_entry(name);
 	// Complete the rest of this function 
-	string number = the_directory.remove_entry(name, number);
-	cout << "The entry has been deleted from the directory" << endl;
 	
 }
 
